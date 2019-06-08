@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="automapper" Version="8.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Servcom.SGA.Domain.Atendimento\Servcom.SGA.Domain.Atendimentos.csproj" />
+    <ProjectReference Include="..\Servcom.SGA.Domain.Usuarios\Servcom.SGA.Domain.Usuarios.csproj" />
+    <ProjectReference Include="..\Servcom.SGA.Infra.CrossCutting.AspNetFilters\Servcom.SGA.Infra.CrossCutting.AspNetFilters.csproj" />
+    <ProjectReference Include="..\Servcom.SGA.Infra.CrossCutting.Identity\Servcom.SGA.Infra.CrossCutting.Identity.csproj" />
+    <ProjectReference Include="..\Servcom.SGA.Infra.Data\Servcom.SGA.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>

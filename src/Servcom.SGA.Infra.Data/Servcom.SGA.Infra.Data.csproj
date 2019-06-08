@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameWorkCore" Version="2.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.1" />
+    <PackageReference Include="pomelo.EntityFrameWorkCore.mysql" Version="2.1.2" />
+    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Servcom.SGA.Domain.Atendimento\Servcom.SGA.Domain.Atendimentos.csproj" />
+    <ProjectReference Include="..\Servcom.SGA.Domain.Usuarios\Servcom.SGA.Domain.Usuarios.csproj" />
+  </ItemGroup>
+
+</Project>

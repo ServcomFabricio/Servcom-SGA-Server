@@ -1,0 +1,12 @@
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Domain.Atendimento\bin\Debug\netcoreapp2.0\Servcom.SGA.Domain.Atendimento.deps.json
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Domain.Atendimento\bin\Debug\netcoreapp2.0\Servcom.SGA.Domain.Atendimento.dll
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Domain.Atendimento\bin\Debug\netcoreapp2.0\Servcom.SGA.Domain.Atendimento.pdb
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Domain.Atendimento\bin\Debug\netcoreapp2.0\Servcom.SGA.Domain.Core.dll
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Domain.Atendimento\bin\Debug\netcoreapp2.0\Servcom.SGA.Domain.Core.pdb
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.0\Servcom.SGA.Domain.Atendimento.csprojAssemblyReference.cache
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.0\Servcom.SGA.Domain.Atendimento.csproj.CoreCompileInputs.cache
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.0\Servcom.SGA.Domain.Atendimento.AssemblyInfoInputs.cache
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.0\Servcom.SGA.Domain.Atendimento.AssemblyInfo.cs
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.0\Servcom.SGA.Domain.Atendimento.csproj.CopyComplete
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.0\Servcom.SGA.Domain.Atendimento.dll
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.0\Servcom.SGA.Domain.Atendimento.pdb

@@ -1,0 +1,14 @@
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Infra.Data\bin\Debug\netcoreapp2.0\Servcom.SGA.Infra.Data.deps.json
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Infra.Data\bin\Debug\netcoreapp2.0\Servcom.SGA.Infra.Data.dll
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Infra.Data\bin\Debug\netcoreapp2.0\Servcom.SGA.Infra.Data.pdb
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Infra.Data\bin\Debug\netcoreapp2.0\Servcom.SGA.Domain.Atendimento.dll
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Infra.Data\bin\Debug\netcoreapp2.0\Servcom.SGA.Domain.Core.dll
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Infra.Data\bin\Debug\netcoreapp2.0\Servcom.SGA.Domain.Atendimento.pdb
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Infra.Data\bin\Debug\netcoreapp2.0\Servcom.SGA.Domain.Core.pdb
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Infra.Data\obj\Debug\netcoreapp2.0\Servcom.SGA.Infra.Data.csprojAssemblyReference.cache
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Infra.Data\obj\Debug\netcoreapp2.0\Servcom.SGA.Infra.Data.csproj.CoreCompileInputs.cache
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Infra.Data\obj\Debug\netcoreapp2.0\Servcom.SGA.Infra.Data.AssemblyInfoInputs.cache
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Infra.Data\obj\Debug\netcoreapp2.0\Servcom.SGA.Infra.Data.AssemblyInfo.cs
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Infra.Data\obj\Debug\netcoreapp2.0\Servcom.SGA.Infra.Data.csproj.CopyComplete
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Infra.Data\obj\Debug\netcoreapp2.0\Servcom.SGA.Infra.Data.dll
+D:\projetos\ServomSGA\ServomSGA\src\Servcom.SGA.Infra.Data\obj\Debug\netcoreapp2.0\Servcom.SGA.Infra.Data.pdb

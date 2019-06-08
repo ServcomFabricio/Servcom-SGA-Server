@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Servcom.SGA.Domain.Atendimento\Servcom.SGA.Domain.Atendimentos.csproj" />
+    <ProjectReference Include="..\Servcom.SGA.Domain.Core\Servcom.SGA.Domain.Core.csproj" />
+  </ItemGroup>
+
+</Project>

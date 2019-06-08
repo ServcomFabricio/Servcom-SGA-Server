@@ -1,0 +1,140 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\projetos\\ServomSGA\\ServomSGA\\src\\Servcom.SGA.Domain.Atendimento\\Servcom.SGA.Domain.Atendimento.csproj": {}
+  },
+  "projects": {
+    "D:\\projetos\\ServomSGA\\ServomSGA\\src\\Servcom.SGA.Domain.Atendimento\\Servcom.SGA.Domain.Atendimento.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\projetos\\ServomSGA\\ServomSGA\\src\\Servcom.SGA.Domain.Atendimento\\Servcom.SGA.Domain.Atendimento.csproj",
+        "projectName": "Servcom.SGA.Domain.Atendimento",
+        "projectPath": "D:\\projetos\\ServomSGA\\ServomSGA\\src\\Servcom.SGA.Domain.Atendimento\\Servcom.SGA.Domain.Atendimento.csproj",
+        "packagesPath": "C:\\Users\\fabricio\\.nuget\\packages\\",
+        "outputPath": "D:\\projetos\\ServomSGA\\ServomSGA\\src\\Servcom.SGA.Domain.Atendimento\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\ProgramData\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\fabricio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore-tooling/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-entityframeworkcore/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-extensions/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "D:\\projetos\\ServomSGA\\ServomSGA\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj": {
+                "projectPath": "D:\\projetos\\ServomSGA\\ServomSGA\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\projetos\\ServomSGA\\ServomSGA\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\projetos\\ServomSGA\\ServomSGA\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj",
+        "projectName": "Servcom.SGA.Domain.Core",
+        "projectPath": "D:\\projetos\\ServomSGA\\ServomSGA\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj",
+        "packagesPath": "C:\\Users\\fabricio\\.nuget\\packages\\",
+        "outputPath": "D:\\projetos\\ServomSGA\\ServomSGA\\src\\Servcom.SGA.Domain.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\ProgramData\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\fabricio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore-tooling/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-aspnetcore/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-entityframeworkcore/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/aspnet-extensions/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "Mediatr": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
