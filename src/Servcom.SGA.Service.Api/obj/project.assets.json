@@ -4596,7 +4596,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "Servcom.SGA.Domain.Core": "1.0.0"
+          "Servcom.SGA.Domain.Core": "1.0.0",
+          "Servcom.SGA.Domain.Usuarios": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Servcom.SGA.Domain.Atendimentos.dll": {}
@@ -4623,7 +4624,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "Servcom.SGA.Domain.Atendimentos": "1.0.0",
           "Servcom.SGA.Domain.Core": "1.0.0"
         },
         "compile": {
@@ -4651,6 +4651,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
+          "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
           "Servcom.SGA.Domain.Core": "1.0.0",
           "pomelo.EntityFrameWorkCore.mysql": "2.1.2"
@@ -12567,11 +12568,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Service.Api\\Servcom.SGA.Service.Api.csproj",
+      "projectUniqueName": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Service.Api\\Servcom.SGA.Service.Api.csproj",
       "projectName": "Servcom.SGA.Service.Api",
-      "projectPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Service.Api\\Servcom.SGA.Service.Api.csproj",
+      "projectPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Service.Api\\Servcom.SGA.Service.Api.csproj",
       "packagesPath": "C:\\Users\\fabricio\\.nuget\\packages\\",
-      "outputPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Service.Api\\obj\\",
+      "outputPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Service.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -12598,17 +12599,17 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Atendimento\\Servcom.SGA.Domain.Atendimentos.csproj": {
-              "projectPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Atendimento\\Servcom.SGA.Domain.Atendimentos.csproj"
+            "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Atendimento\\Servcom.SGA.Domain.Atendimentos.csproj": {
+              "projectPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Atendimento\\Servcom.SGA.Domain.Atendimentos.csproj"
             },
-            "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj": {
-              "projectPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj"
+            "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj": {
+              "projectPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj"
             },
-            "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Usuarios\\Servcom.SGA.Domain.Usuarios.csproj": {
-              "projectPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Usuarios\\Servcom.SGA.Domain.Usuarios.csproj"
+            "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Usuarios\\Servcom.SGA.Domain.Usuarios.csproj": {
+              "projectPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Usuarios\\Servcom.SGA.Domain.Usuarios.csproj"
             },
-            "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Infra.CrossCutting.IoC\\Servcom.SGA.Infra.CrossCutting.IoC.csproj": {
-              "projectPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Infra.CrossCutting.IoC\\Servcom.SGA.Infra.CrossCutting.IoC.csproj"
+            "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Infra.CrossCutting.IoC\\Servcom.SGA.Infra.CrossCutting.IoC.csproj": {
+              "projectPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Infra.CrossCutting.IoC\\Servcom.SGA.Infra.CrossCutting.IoC.csproj"
             }
           }
         }
@@ -12627,10 +12628,8 @@
             "version": "[5.0.1, )"
           },
           "Microsoft.AspNetCore.App": {
-            "suppressParent": "All",
             "target": "Package",
-            "version": "[2.2.0, )",
-            "autoReferenced": true
+            "version": "[2.2.0, )"
           },
           "Microsoft.AspNetCore.Razor.Design": {
             "suppressParent": "All",

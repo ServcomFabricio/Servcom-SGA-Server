@@ -9,8 +9,8 @@ using Servcom.SGA.Infra.Data.Context;
 namespace Servcom.SGA.Infra.Data.Migrations
 {
     [DbContext(typeof(ServcomSGAContext))]
-    [Migration("20190608020553_01_07062019")]
-    partial class _01_07062019
+    [Migration("20190612214622_06_12062019")]
+    partial class _06_12062019
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,21 +33,24 @@ namespace Servcom.SGA.Infra.Data.Migrations
 
                     b.Property<DateTime>("DataHoraultimoReingresso");
 
-                    b.Property<DateTime>("HoraCriacao");
+                    b.Property<string>("HoraCriacao");
+
+                    b.Property<int>("Sequencia");
 
                     b.Property<int>("Status");
 
-                    b.Property<Guid?>("TipoId");
+                    b.Property<DateTime>("TimeStamp")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate();
 
-                    b.Property<string>("Usuario");
+                    b.Property<Guid?>("TipoId")
+                        .IsRequired();
 
                     b.Property<Guid?>("UsuarioId");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TipoId");
-
-                    b.HasIndex("UsuarioId");
+                    b.HasAlternateKey("TipoId", "DataCriacao", "Sequencia");
 
                     b.ToTable("Atendimentos");
                 });
@@ -57,11 +60,13 @@ namespace Servcom.SGA.Infra.Data.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<bool>("Ativo");
+
                     b.Property<string>("Descricao");
 
                     b.Property<bool>("Prioritario");
 
-                    b.Property<string>("Sigla");
+                    b.Property<string>("Tipo");
 
                     b.HasKey("Id");
 
@@ -94,11 +99,8 @@ namespace Servcom.SGA.Infra.Data.Migrations
                 {
                     b.HasOne("Servcom.SGA.Domain.Atendimentos.TipoAtendimento", "TipoAtendimento")
                         .WithMany("Atendimentos")
-                        .HasForeignKey("TipoId");
-
-                    b.HasOne("Servcom.SGA.Domain.Usuarios.Usuario")
-                        .WithMany("Atendimento")
-                        .HasForeignKey("UsuarioId");
+                        .HasForeignKey("TipoId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

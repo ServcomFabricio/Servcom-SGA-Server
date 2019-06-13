@@ -12247,11 +12247,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Infra.CrossCutting.Identity\\Servcom.SGA.Infra.CrossCutting.Identity.csproj",
+      "projectUniqueName": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Infra.CrossCutting.Identity\\Servcom.SGA.Infra.CrossCutting.Identity.csproj",
       "projectName": "Servcom.SGA.Infra.CrossCutting.Identity",
-      "projectPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Infra.CrossCutting.Identity\\Servcom.SGA.Infra.CrossCutting.Identity.csproj",
+      "projectPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Infra.CrossCutting.Identity\\Servcom.SGA.Infra.CrossCutting.Identity.csproj",
       "packagesPath": "C:\\Users\\fabricio\\.nuget\\packages\\",
-      "outputPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Infra.CrossCutting.Identity\\obj\\",
+      "outputPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Infra.CrossCutting.Identity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -12278,8 +12278,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj": {
-              "projectPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj"
+            "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj": {
+              "projectPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj"
             }
           }
         }
@@ -12294,10 +12294,8 @@
       "netcoreapp2.2": {
         "dependencies": {
           "Microsoft.AspNetCore.App": {
-            "suppressParent": "All",
             "target": "Package",
-            "version": "[2.2.0, )",
-            "autoReferenced": true
+            "version": "[2.2.0, )"
           },
           "Microsoft.Extensions.DependencyInjection.Abstractions": {
             "target": "Package",

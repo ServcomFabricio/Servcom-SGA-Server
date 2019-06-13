@@ -893,7 +893,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "Servcom.SGA.Domain.Core": "1.0.0"
+          "Servcom.SGA.Domain.Core": "1.0.0",
+          "Servcom.SGA.Domain.Usuarios": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Servcom.SGA.Domain.Atendimentos.dll": {}
@@ -920,7 +921,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "Servcom.SGA.Domain.Atendimentos": "1.0.0",
           "Servcom.SGA.Domain.Core": "1.0.0"
         },
         "compile": {
@@ -3438,11 +3438,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Infra.Data\\Servcom.SGA.Infra.Data.csproj",
+      "projectUniqueName": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Infra.Data\\Servcom.SGA.Infra.Data.csproj",
       "projectName": "Servcom.SGA.Infra.Data",
-      "projectPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Infra.Data\\Servcom.SGA.Infra.Data.csproj",
+      "projectPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Infra.Data\\Servcom.SGA.Infra.Data.csproj",
       "packagesPath": "C:\\Users\\fabricio\\.nuget\\packages\\",
-      "outputPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Infra.Data\\obj\\",
+      "outputPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Infra.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -3469,11 +3469,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Atendimento\\Servcom.SGA.Domain.Atendimentos.csproj": {
-              "projectPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Atendimento\\Servcom.SGA.Domain.Atendimentos.csproj"
+            "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Atendimento\\Servcom.SGA.Domain.Atendimentos.csproj": {
+              "projectPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Atendimento\\Servcom.SGA.Domain.Atendimentos.csproj"
             },
-            "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Usuarios\\Servcom.SGA.Domain.Usuarios.csproj": {
-              "projectPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Usuarios\\Servcom.SGA.Domain.Usuarios.csproj"
+            "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Usuarios\\Servcom.SGA.Domain.Usuarios.csproj": {
+              "projectPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Usuarios\\Servcom.SGA.Domain.Usuarios.csproj"
             }
           }
         }

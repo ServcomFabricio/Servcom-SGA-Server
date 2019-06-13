@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Servcom.SGA.Infra.Data.Migrations
 {
-    public partial class _01_07062019 : Migration
+    public partial class inicial_12062019 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,9 +12,10 @@ namespace Servcom.SGA.Infra.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    Tipo = table.Column<string>(nullable: true),
                     Descricao = table.Column<string>(nullable: true),
-                    Sigla = table.Column<string>(nullable: true),
-                    Prioritario = table.Column<bool>(nullable: false)
+                    Prioritario = table.Column<bool>(nullable: false),
+                    Ativo = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -40,15 +41,15 @@ namespace Servcom.SGA.Infra.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(nullable: false),
+                    Sequencia = table.Column<int>(nullable: false),
                     DataCriacao = table.Column<DateTime>(type: "date", nullable: false),
-                    HoraCriacao = table.Column<DateTime>(nullable: false),
+                    HoraCriacao = table.Column<string>(nullable: true),
                     DataHoraInicio = table.Column<DateTime>(nullable: false),
                     DataHoraFim = table.Column<DateTime>(nullable: false),
                     DataHoraultimoReingresso = table.Column<DateTime>(nullable: false),
                     Status = table.Column<int>(nullable: false),
                     UsuarioId = table.Column<Guid>(nullable: true),
-                    TipoId = table.Column<Guid>(nullable: true),
-                    Usuario = table.Column<string>(nullable: true)
+                    TipoId = table.Column<Guid>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -59,23 +60,12 @@ namespace Servcom.SGA.Infra.Data.Migrations
                         principalTable: "TipoAtendimentos",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_Atendimentos_Usuarios_UsuarioId",
-                        column: x => x.UsuarioId,
-                        principalTable: "Usuarios",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Atendimentos_TipoId",
                 table: "Atendimentos",
                 column: "TipoId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Atendimentos_UsuarioId",
-                table: "Atendimentos",
-                column: "UsuarioId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -84,10 +74,10 @@ namespace Servcom.SGA.Infra.Data.Migrations
                 name: "Atendimentos");
 
             migrationBuilder.DropTable(
-                name: "TipoAtendimentos");
+                name: "Usuarios");
 
             migrationBuilder.DropTable(
-                name: "Usuarios");
+                name: "TipoAtendimentos");
         }
     }
 }

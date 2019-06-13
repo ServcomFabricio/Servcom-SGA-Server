@@ -1,6 +1,10 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
+using Servcom.SGA.Domain.Atendimentos.Commands;
+using Servcom.SGA.Domain.Atendimentos.Commands.CommandsTipoAtendimento;
+using Servcom.SGA.Domain.Atendimentos.Events;
+using Servcom.SGA.Domain.Atendimentos.Events.EventsTipoAtendimento;
 using Servcom.SGA.Domain.Atendimentos.Repository;
 using Servcom.SGA.Domain.Core.Handlers;
 using Servcom.SGA.Domain.Core.Interfaces;
@@ -29,14 +33,29 @@ namespace Servcom.SGA.Infra.CrossCutting.IoC.InjectorDependecies
             services.AddScoped<IRequestHandler<ExcluirUsuarioCommand,bool>, UsuarioCommandHandler>();
             services.AddScoped<IRequestHandler<EditarUsuarioCommand,bool>, UsuarioCommandHandler>();
 
+            services.AddScoped<IRequestHandler<IncluirTipoAtendimentoCommand,bool>, TipoAtendimentoCommandHandler>();
+            services.AddScoped<IRequestHandler<EditarTipoAtendimentoCommand,bool>, TipoAtendimentoCommandHandler>();
+            services.AddScoped<IRequestHandler<ExcluirTipoAtendimentoCommand,bool>, TipoAtendimentoCommandHandler>();
+
+           services.AddScoped<IRequestHandler<IncluirAtendimentoCommand, bool>, AtendimentoCommandHandler>();
+
+
             //Domain - Events
             services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
             services.AddScoped<INotificationHandler<UsuarioRegistradoEvent>, UsuarioEventHandler>();
             services.AddScoped<INotificationHandler<UsuarioExcluidoEvent>, UsuarioEventHandler>();
             services.AddScoped<INotificationHandler<UsuarioAtualizadoEvent>, UsuarioEventHandler>();
 
+            services.AddScoped<INotificationHandler<TipoAtendimentoRegistradoEvent>, TipoAtendimentoEventHandler>();
+            services.AddScoped<INotificationHandler<TipoAtendimentoAtualizadoEvent>, TipoAtendimentoEventHandler>();
+            services.AddScoped<INotificationHandler<TipoAtendimentoExcluidoEvent>, TipoAtendimentoEventHandler>();
+
+            services.AddScoped<INotificationHandler<AtendimentoRegistradoEvent>, AtendimentoEventHandler>();
+
+
             // Infra - Data
             services.AddScoped<IAtendimentoRepository, AtendimentoRepository>();
+            services.AddScoped<ITipoAtendimentoRepository, TipoAtendimentoRepository>();
             services.AddScoped<IUsuarioRepository,UsuarioRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<ServcomSGAContext>();

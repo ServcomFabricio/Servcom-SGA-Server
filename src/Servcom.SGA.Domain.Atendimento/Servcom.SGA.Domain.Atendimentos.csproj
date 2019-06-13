@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Servcom.SGA.Domain.Core\Servcom.SGA.Domain.Core.csproj" />
+    <ProjectReference Include="..\Servcom.SGA.Domain.Usuarios\Servcom.SGA.Domain.Usuarios.csproj" />
   </ItemGroup>
 
 </Project>

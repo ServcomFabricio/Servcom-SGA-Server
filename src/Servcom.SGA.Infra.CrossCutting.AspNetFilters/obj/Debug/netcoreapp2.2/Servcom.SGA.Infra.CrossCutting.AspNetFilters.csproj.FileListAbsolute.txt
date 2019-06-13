@@ -22,3 +22,15 @@ D:\projetos\ServomSGA\ServcomSGA\src\Servcom.SGA.Infra.CrossCutting.AspNetFilter
 D:\projetos\ServomSGA\ServcomSGA\src\Servcom.SGA.Infra.CrossCutting.AspNetFilters\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.AspNetFilters.csproj.CopyComplete
 D:\projetos\ServomSGA\ServcomSGA\src\Servcom.SGA.Infra.CrossCutting.AspNetFilters\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.AspNetFilters.dll
 D:\projetos\ServomSGA\ServcomSGA\src\Servcom.SGA.Infra.CrossCutting.AspNetFilters\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.AspNetFilters.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.AspNetFilters\bin\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.AspNetFilters.deps.json
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.AspNetFilters\bin\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.AspNetFilters.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.AspNetFilters\bin\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.AspNetFilters.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.AspNetFilters\bin\Debug\netcoreapp2.2\Servcom.SGA.Domain.Core.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.AspNetFilters\bin\Debug\netcoreapp2.2\Servcom.SGA.Domain.Core.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.AspNetFilters\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.AspNetFilters.csprojAssemblyReference.cache
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.AspNetFilters\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.AspNetFilters.csproj.CoreCompileInputs.cache
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.AspNetFilters\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.AspNetFilters.AssemblyInfoInputs.cache
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.AspNetFilters\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.AspNetFilters.AssemblyInfo.cs
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.AspNetFilters\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.AspNetFilters.csproj.CopyComplete
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.AspNetFilters\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.AspNetFilters.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.AspNetFilters\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.AspNetFilters.pdb

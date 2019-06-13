@@ -22,3 +22,17 @@ D:\projetos\ServomSGA\ServcomSGA\src\Servcom.SGA.Domain.Atendimento\obj\Debug\ne
 D:\projetos\ServomSGA\ServcomSGA\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.csproj.CopyComplete
 D:\projetos\ServomSGA\ServcomSGA\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.dll
 D:\projetos\ServomSGA\ServcomSGA\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\bin\Debug\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.deps.json
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\bin\Debug\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\bin\Debug\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\bin\Debug\netcoreapp2.2\Servcom.SGA.Domain.Core.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\bin\Debug\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\bin\Debug\netcoreapp2.2\Servcom.SGA.Domain.Core.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\bin\Debug\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.csprojAssemblyReference.cache
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.csproj.CoreCompileInputs.cache
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.AssemblyInfoInputs.cache
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.AssemblyInfo.cs
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.csproj.CopyComplete
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.pdb

@@ -26,3 +26,15 @@ D:\projetos\ServomSGA\ServcomSGA\src\Servcom.SGA.Domain.Usuarios\obj\Debug\netco
 D:\projetos\ServomSGA\ServcomSGA\src\Servcom.SGA.Domain.Usuarios\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.csproj.CopyComplete
 D:\projetos\ServomSGA\ServcomSGA\src\Servcom.SGA.Domain.Usuarios\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.dll
 D:\projetos\ServomSGA\ServcomSGA\src\Servcom.SGA.Domain.Usuarios\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\bin\Debug\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.deps.json
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\bin\Debug\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\bin\Debug\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\bin\Debug\netcoreapp2.2\Servcom.SGA.Domain.Core.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\bin\Debug\netcoreapp2.2\Servcom.SGA.Domain.Core.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.csprojAssemblyReference.cache
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.csproj.CoreCompileInputs.cache
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.AssemblyInfoInputs.cache
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.AssemblyInfo.cs
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.csproj.CopyComplete
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.pdb

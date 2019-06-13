@@ -9,12 +9,20 @@ namespace Servcom.SGA.Infra.Data.Mappings
         public void Configure(EntityTypeBuilder<Atendimento> builder)
         {
             builder.Property(a => a.DataCriacao).HasColumnType("date");
+            builder.Property(a => a.TipoId).HasColumnType("CHAR(36)");
+            builder.Property(a => a.UsuarioId).HasColumnType("CHAR(36)");
+            builder.Property(a => a.TimeStamp)
+                .IsConcurrencyToken(true)
+                .ValueGeneratedOnAddOrUpdate();
             builder.Ignore(a => a.ValidationResult);
             builder.Ignore(a => a.CascadeMode);
+            builder.Ignore(a => a.Senha);
+            
             builder.HasOne(a => a.TipoAtendimento)
-                .WithMany(a => a.Atendimentos)
+                .WithMany(t => t.Atendimentos)
                 .HasForeignKey(a => a.TipoId)
                 .IsRequired(false);
+            
             builder.ToTable("Atendimentos");
 
         }

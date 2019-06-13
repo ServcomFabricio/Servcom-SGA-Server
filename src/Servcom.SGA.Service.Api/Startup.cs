@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
@@ -43,7 +44,9 @@ namespace Servcom.SGA.Service.Api
                 options.Password.RequiredUniqueChars = 0;
        
             });
-    
+
+            services.AddCors();
+
             // Options para configurações customizadas
             services.AddOptions();
 
@@ -83,6 +86,13 @@ namespace Servcom.SGA.Service.Api
             {
                 app.UseHsts();
             }
+
+            app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
 
             #region Configurações MVC
 

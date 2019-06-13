@@ -3,7 +3,8 @@
     public enum EStatus
     {
         Ativo=1,
-        Pendente=2
+        Pendente=2,
+        Excluido=3
 
     }
 }

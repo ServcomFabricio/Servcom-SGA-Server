@@ -1,8 +1,6 @@
 ﻿using Servcom.SGA.Domain.Core.Models;
-using Servcom.SGA.Domain.Atendimentos;
-using System.Collections.Generic;
 using System;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 namespace Servcom.SGA.Domain.Usuarios
 {
@@ -20,10 +18,7 @@ namespace Servcom.SGA.Domain.Usuarios
         public string Setor { get; private set; }
 
         // EF Construtor
-        protected Usuario() { }
-
-        // EF Propriedade de Navegação
-        public virtual ICollection<Atendimento> Atendimento { get; set; }
+        private Usuario() { }
 
         public override bool EhValido()
         {

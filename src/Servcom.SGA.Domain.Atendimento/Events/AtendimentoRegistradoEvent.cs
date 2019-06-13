@@ -4,10 +4,10 @@ namespace Servcom.SGA.Domain.Atendimentos.Events
 {
     public class AtendimentoRegistradoEvent:BaseAtendimentoEvent
     {
-        public AtendimentoRegistradoEvent(Guid id,int senha, Guid tipoId, DateTime dataHoraCriacao)
+        public AtendimentoRegistradoEvent(Guid id,int sequencia, DateTime dataHoraCriacao, Guid? tipoId)
         {
             Id = id;
-            Senha = senha;
+            Sequencia = sequencia;
             TipoId = tipoId;
             DataHoraCriacao = dataHoraCriacao;
 

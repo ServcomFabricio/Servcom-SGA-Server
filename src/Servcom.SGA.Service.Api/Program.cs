@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 
 namespace Servcom.SGA.Service.Api
 {
@@ -17,8 +10,12 @@ namespace Servcom.SGA.Service.Api
             CreateWebHostBuilder(args).Build().Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+        
+
+    public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+            //TODO:Liberar para produção    
+            //.UseKestrel(opts => {opts.Listen(System.Net.IPAddress.Parse("0.0.0.0"), 5000);})              
                 .UseStartup<Startup>();
     }
 }

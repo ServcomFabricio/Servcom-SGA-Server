@@ -22,8 +22,6 @@ using System.Threading.Tasks;
 
 namespace Servcom.SGA.Service.Api.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
     public class UserController : BaseController
     {
         private readonly UserManager<ApplicationUser> _userManager;

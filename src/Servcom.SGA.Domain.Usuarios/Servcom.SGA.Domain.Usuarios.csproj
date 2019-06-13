@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Servcom.SGA.Domain.Atendimento\Servcom.SGA.Domain.Atendimentos.csproj" />
     <ProjectReference Include="..\Servcom.SGA.Domain.Core\Servcom.SGA.Domain.Core.csproj" />
   </ItemGroup>
 

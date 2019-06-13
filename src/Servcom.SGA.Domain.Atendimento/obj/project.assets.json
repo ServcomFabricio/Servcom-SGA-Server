@@ -251,6 +251,19 @@
         "runtime": {
           "bin/placeholder/Servcom.SGA.Domain.Core.dll": {}
         }
+      },
+      "Servcom.SGA.Domain.Usuarios/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Servcom.SGA.Domain.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Servcom.SGA.Domain.Usuarios.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Servcom.SGA.Domain.Usuarios.dll": {}
+        }
       }
     }
   },
@@ -846,12 +859,18 @@
       "type": "project",
       "path": "../Servcom.SGA.Domain.Core/Servcom.SGA.Domain.Core.csproj",
       "msbuildProject": "../Servcom.SGA.Domain.Core/Servcom.SGA.Domain.Core.csproj"
+    },
+    "Servcom.SGA.Domain.Usuarios/1.0.0": {
+      "type": "project",
+      "path": "../Servcom.SGA.Domain.Usuarios/Servcom.SGA.Domain.Usuarios.csproj",
+      "msbuildProject": "../Servcom.SGA.Domain.Usuarios/Servcom.SGA.Domain.Usuarios.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.NETCore.App >= 2.2.0",
-      "Servcom.SGA.Domain.Core >= 1.0.0"
+      "Servcom.SGA.Domain.Core >= 1.0.0",
+      "Servcom.SGA.Domain.Usuarios >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -862,11 +881,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Atendimento\\Servcom.SGA.Domain.Atendimentos.csproj",
+      "projectUniqueName": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Atendimento\\Servcom.SGA.Domain.Atendimentos.csproj",
       "projectName": "Servcom.SGA.Domain.Atendimentos",
-      "projectPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Atendimento\\Servcom.SGA.Domain.Atendimentos.csproj",
+      "projectPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Atendimento\\Servcom.SGA.Domain.Atendimentos.csproj",
       "packagesPath": "C:\\Users\\fabricio\\.nuget\\packages\\",
-      "outputPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Atendimento\\obj\\",
+      "outputPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Atendimento\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -893,8 +912,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj": {
-              "projectPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj"
+            "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj": {
+              "projectPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj"
+            },
+            "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Usuarios\\Servcom.SGA.Domain.Usuarios.csproj": {
+              "projectPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Usuarios\\Servcom.SGA.Domain.Usuarios.csproj"
             }
           }
         }

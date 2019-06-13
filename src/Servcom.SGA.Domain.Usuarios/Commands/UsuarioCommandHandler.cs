@@ -93,9 +93,9 @@ namespace Servcom.SGA.Domain.Usuarios.Commands
                 return Task.FromResult(true);
             }
 
-            var usuarioEeditado = _usuarioRepository.ObterPorId(usuario.Id);
+            var usuarioEditado = _usuarioRepository.ObterPorId(usuario.Id);
 
-            if (usuarioEeditado.Sigla != usuario.Sigla)
+            if (usuarioEditado.Sigla != usuario.Sigla)
             {
                 _mediator.PublicarEvento(new DomainNotification(request.MessageType, "Sigla Não pode ser alterada"));
             }

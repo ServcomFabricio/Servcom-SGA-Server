@@ -31,6 +31,8 @@ namespace Servcom.SGA.Infra.Data.Context
             modelBuilder.ApplyConfiguration<Atendimento>(new AtendimentoMapping());
             modelBuilder.ApplyConfiguration<TipoAtendimento>(new TipoAtendimentoMapping());
             modelBuilder.ApplyConfiguration<Usuario>(new UsuarioMapping());
+            modelBuilder.Entity<Atendimento>().HasAlternateKey(a =>new { a.TipoId,a.DataCriacao,a.Sequencia });
+       
            
             base.OnModelCreating(modelBuilder);
         }

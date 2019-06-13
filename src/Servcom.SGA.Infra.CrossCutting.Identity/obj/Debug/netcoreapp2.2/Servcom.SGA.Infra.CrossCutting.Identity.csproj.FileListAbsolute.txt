@@ -26,3 +26,17 @@ D:\projetos\ServomSGA\ServcomSGA\src\Servcom.SGA.Infra.CrossCutting.Identity\obj
 D:\projetos\ServomSGA\ServcomSGA\src\Servcom.SGA.Infra.CrossCutting.Identity\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.Identity.csproj.CopyComplete
 D:\projetos\ServomSGA\ServcomSGA\src\Servcom.SGA.Infra.CrossCutting.Identity\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.Identity.dll
 D:\projetos\ServomSGA\ServcomSGA\src\Servcom.SGA.Infra.CrossCutting.Identity\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.Identity.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.Identity\bin\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.Identity.deps.json
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.Identity\bin\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.Identity.runtimeconfig.json
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.Identity\bin\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.Identity.runtimeconfig.dev.json
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.Identity\bin\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.Identity.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.Identity\bin\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.Identity.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.Identity\bin\Debug\netcoreapp2.2\Servcom.SGA.Domain.Core.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.Identity\bin\Debug\netcoreapp2.2\Servcom.SGA.Domain.Core.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.Identity\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.Identity.csprojAssemblyReference.cache
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.Identity\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.Identity.csproj.CoreCompileInputs.cache
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.Identity\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.Identity.AssemblyInfoInputs.cache
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.Identity\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.Identity.AssemblyInfo.cs
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.Identity\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.Identity.csproj.CopyComplete
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.Identity\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.Identity.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.Identity\obj\Debug\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.Identity.pdb

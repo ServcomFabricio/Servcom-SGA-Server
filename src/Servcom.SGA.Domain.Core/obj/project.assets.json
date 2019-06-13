@@ -844,11 +844,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj",
+      "projectUniqueName": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj",
       "projectName": "Servcom.SGA.Domain.Core",
-      "projectPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj",
+      "projectPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Core\\Servcom.SGA.Domain.Core.csproj",
       "packagesPath": "C:\\Users\\fabricio\\.nuget\\packages\\",
-      "outputPath": "D:\\projetos\\ServomSGA\\ServcomSGA\\src\\Servcom.SGA.Domain.Core\\obj\\",
+      "outputPath": "D:\\projetos\\ServcomSGA\\Server\\Servcom-SGA-Server\\src\\Servcom.SGA.Domain.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
