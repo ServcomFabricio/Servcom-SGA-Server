@@ -44,8 +44,21 @@ namespace Servcom.SGA.Service.Api
                 options.Password.RequiredUniqueChars = 0;
        
             });
+            
+            // incluir SignalR
+            services.AddSignalR();
 
-            services.AddCors();
+            // inlcui CORS
+            //services.AddCors();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.WithOrigins("http://localhost:4200")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials());
+            });
 
             // Options para configurações customizadas
             services.AddOptions();
@@ -87,7 +100,13 @@ namespace Servcom.SGA.Service.Api
                 app.UseHsts();
             }
 
-            app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+            //app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+            app.UseCors("CorsPolicy");
+
+            app.UseSignalR(route =>
+            {
+                route.MapHub<SignalRConfiguration>("/painel-atendimento-client");
+            });
 
             app.UseForwardedHeaders(new ForwardedHeadersOptions
             {

@@ -2,12 +2,14 @@
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Servcom.Service.API.Controllers;
 using Servcom.SGA.Domain.Atendimentos.Commands;
 using Servcom.SGA.Domain.Atendimentos.Commands.CommandsTipoAtendimento;
 using Servcom.SGA.Domain.Atendimentos.Repository;
 using Servcom.SGA.Domain.Core.Interfaces;
 using Servcom.SGA.Domain.Core.Notifications;
+using Servcom.SGA.Service.Api.Configurations;
 using Servcom.SGA.Service.Api.ViewModels.Atendimento;
 using System;
 using System.Collections.Generic;
@@ -21,17 +23,34 @@ namespace Servcom.SGA.Service.Api.Controllers
         private readonly IMapper _mapper;
         private readonly ITipoAtendimentoRepository _tipoAtendimentoRepository;
         private readonly IAtendimentoRepository _atendimentoRepository;
+        private IHubContext<SignalRConfiguration> _hubPainel;
         public AtendimentoController(INotificationHandler<DomainNotification> notifications,
                                      IUser user,
                                      IMapper mapper,
                                      ITipoAtendimentoRepository tipoAtendimentoRepository,
                                      IAtendimentoRepository atendimentoRepository,
-                                     IMediatorHandler mediator) : base(notifications, user, mediator)
+                                     IMediatorHandler mediator,
+                                     IHubContext<SignalRConfiguration> hubPainel) : base(notifications, user, mediator)
         {
             _mediator = mediator;
             _mapper = mapper;
             _tipoAtendimentoRepository = tipoAtendimentoRepository;
             _atendimentoRepository = atendimentoRepository;
+            _hubPainel = hubPainel;
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        [Route("painel-atendimento-server")]
+        public IActionResult PainelAtendimento()
+        {
+            _hubPainel.Clients.All.SendAsync("painelAtendimento", new List<PainelAtendimentoModel>{
+                new PainelAtendimentoModel() { Status=true,Senha="PRT0015", Guiche="02", Prioritario=true},
+                new PainelAtendimentoModel() { Status=true,Senha="PRT0014", Guiche="03", Prioritario=true},
+                new PainelAtendimentoModel() { Status=true,Senha="PRT0016", Guiche="04", Prioritario=true},
+            });
+
+            return Ok();
         }
 
         [HttpPost]
