@@ -13,11 +13,12 @@ using Servcom.SGA.Service.Api.Configurations;
 using Servcom.SGA.Service.Api.ViewModels.Atendimento;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Servcom.SGA.Service.Api.Controllers
 {
-      public class AtendimentoController : BaseController
+    public class AtendimentoController : BaseController
     {
         private readonly IMediatorHandler _mediator;
         private readonly IMapper _mapper;
@@ -41,36 +42,47 @@ namespace Servcom.SGA.Service.Api.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        [Route("painel-atendimento-server")]
-        public IActionResult PainelAtendimento()
+        [Route("nova-chamada-atendimento/{idAtendimento:guid}")]
+        public IActionResult NovaChamadaAtendimento(Guid idAtendimento)
         {
-            _hubPainel.Clients.All.SendAsync("painelAtendimento", new List<PainelAtendimentoModel>{
-                new PainelAtendimentoModel() { Status=true,Senha="PRT0015", Guiche="02", Prioritario=true},
-                new PainelAtendimentoModel() { Status=true,Senha="PRT0014", Guiche="03", Prioritario=true},
-                new PainelAtendimentoModel() { Status=true,Senha="PRT0016", Guiche="04", Prioritario=true},
-            });
-
-            return Ok();
+            var atendimento = _mapper.Map<AtendimentoViewModel>(_atendimentoRepository.ObterPorId(idAtendimento));
+            if (atendimento == null) {
+                NotificarErro("Erro", "Atendimento não encontrado");
+                return Response(); 
+            }
+            var result= _mapper.Map<IEnumerable<AtendimentoViewModel>>(_atendimentoRepository.painelAtendimento(3));
+            var listaAtendimento = new List<AtendimentoViewModel>() { atendimento };
+            var response = listaAtendimento.Union(result);
+            _hubPainel.Clients.All.SendAsync("painelAtendimento", response);
+            return Response("OK");
         }
 
         [HttpPost]
         [AllowAnonymous]
-        [Route("incluir-atendimento")]
-        public IActionResult novoAtendimento([FromBody] AtendimentoViewModel model)
+        [Route("incluir-atendimento/{tipoId:guid}")]
+        public IActionResult novoAtendimento(Guid tipoId)
         {
+            var model =new AtendimentoViewModel() { TipoId=tipoId };
             var incluirCommand = _mapper.Map<IncluirAtendimentoCommand>(model);
              _mediator.EnviarComando(incluirCommand);
-            var response = _atendimentoRepository.atendimentoFormatado(incluirCommand.Id);
+
+            if (!OperacaoValida()) return Response(model);
+            
+            var response = _atendimentoRepository.ObterPorId(incluirCommand.Id);
             return Response(_mapper.Map<AtendimentoViewModel>(response));
         }
 
-        [HttpGet]
+        [HttpPost]
         [AllowAnonymous]
         [Route("proximo-atendimento")]
-        public IActionResult proximoAtendimento(Guid tipoAtendimento,DateTime dataCriacao, Guid usuarioId)
+        public async Task<IActionResult> proximoAtendimento([FromBody] ProximoAtendimentoViewModel model)
         {
-            var response = _atendimentoRepository.obterPrimeiroAtendimentoSemUsuario(tipoAtendimento,dataCriacao,usuarioId);
-            return Response(_mapper.Map<AtendimentoViewModel>(response));
+            var proximoAtendimentoCommand = _mapper.Map<ProximoAtendimentoCommand>(model);
+            var result = await _mediator.EnviarComandoEntity(proximoAtendimentoCommand);
+            if (!OperacaoValida()) return Response();
+            await _hubPainel.Clients.All.SendAsync("painelAtendimento", _mapper.Map<IEnumerable<AtendimentoViewModel>>(_atendimentoRepository.painelAtendimento(4)));
+            var response = _mapper.Map<AtendimentoViewModel>(result);
+            return Response(response);
         }
 
 

@@ -1,9 +1,7 @@
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\bin\Release\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.deps.json
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\bin\Release\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.dll
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\bin\Release\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.pdb
-D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\bin\Release\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.dll
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\bin\Release\netcoreapp2.2\Servcom.SGA.Domain.Core.dll
-D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\bin\Release\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.pdb
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\bin\Release\netcoreapp2.2\Servcom.SGA.Domain.Core.pdb
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\obj\Release\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.csprojAssemblyReference.cache
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Usuarios\obj\Release\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.csproj.CoreCompileInputs.cache

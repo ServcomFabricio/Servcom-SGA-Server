@@ -24,6 +24,9 @@ namespace Servcom.SGA.Service.Api.AutoMapper
             CreateMap<AtendimentoViewModel, IncluirAtendimentoCommand>()
              .ConstructUsing(a => new IncluirAtendimentoCommand(a.Id,a.TipoId));
 
+            CreateMap<ProximoAtendimentoViewModel, ProximoAtendimentoCommand>()
+ .ConstructUsing(a => new ProximoAtendimentoCommand(a.Tipo,a.DataCriacao,a.Usuario,a.Prioritario));
+
 
         }
     }

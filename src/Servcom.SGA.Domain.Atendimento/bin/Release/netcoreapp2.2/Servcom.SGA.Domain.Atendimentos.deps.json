@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v2.2": {
       "Servcom.SGA.Domain.Atendimentos/1.0.0": {
         "dependencies": {
-          "Servcom.SGA.Domain.Core": "1.0.0"
+          "Servcom.SGA.Domain.Core": "1.0.0",
+          "Servcom.SGA.Domain.Usuarios": "1.0.0"
         },
         "runtime": {
           "Servcom.SGA.Domain.Atendimentos.dll": {}
@@ -42,6 +43,14 @@
         "runtime": {
           "Servcom.SGA.Domain.Core.dll": {}
         }
+      },
+      "Servcom.SGA.Domain.Usuarios/1.0.0": {
+        "dependencies": {
+          "Servcom.SGA.Domain.Core": "1.0.0"
+        },
+        "runtime": {
+          "Servcom.SGA.Domain.Usuarios.dll": {}
+        }
       }
     }
   },
@@ -73,6 +82,11 @@
       "hashPath": "system.componentmodel.annotations.4.4.1.nupkg.sha512"
     },
     "Servcom.SGA.Domain.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Servcom.SGA.Domain.Usuarios/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

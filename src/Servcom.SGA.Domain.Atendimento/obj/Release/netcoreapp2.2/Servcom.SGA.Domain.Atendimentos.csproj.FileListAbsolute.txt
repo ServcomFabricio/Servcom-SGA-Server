@@ -10,3 +10,5 @@ D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendime
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\obj\Release\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.csproj.CopyComplete
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\obj\Release\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.dll
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\obj\Release\netcoreapp2.2\Servcom.SGA.Domain.Atendimentos.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\bin\Release\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Atendimento\bin\Release\netcoreapp2.2\Servcom.SGA.Domain.Usuarios.pdb

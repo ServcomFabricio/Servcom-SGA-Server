@@ -25,13 +25,21 @@ namespace Servcom.SGA.Infra.Data.Migrations
                     b.Property<DateTime>("DataCriacao")
                         .HasColumnType("date");
 
+                    b.Property<DateTime>("DataHoraChamada");
+
                     b.Property<DateTime>("DataHoraFim");
 
                     b.Property<DateTime>("DataHoraInicio");
 
                     b.Property<DateTime>("DataHoraultimoReingresso");
 
+                    b.Property<string>("Guiche");
+
                     b.Property<string>("HoraCriacao");
+
+                    b.Property<bool>("Prioritario");
+
+                    b.Property<string>("Senha");
 
                     b.Property<int>("Sequencia");
 

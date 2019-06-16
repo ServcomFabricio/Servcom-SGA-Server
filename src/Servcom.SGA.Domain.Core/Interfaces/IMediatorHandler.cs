@@ -8,5 +8,7 @@ namespace Servcom.SGA.Domain.Core.Interfaces
     {
         Task PublicarEvento<T>(T evento) where T : Event;
         Task EnviarComando<T>(T comando) where T : Command;
+        Task<object> EnviarComandoEntity<T>(T comando) where T : CommandEntity;
+
     }
 }

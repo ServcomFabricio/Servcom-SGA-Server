@@ -21,10 +21,17 @@ namespace Servcom.SGA.Domain.Core.Handlers
             await _mediator.Send(comando);
         }
 
+        public async Task<object> EnviarComandoEntity<T>(T comando) where T : CommandEntity
+        {
+            return await Task.FromResult(await _mediator.Send(comando));
+        }
+
         public async Task PublicarEvento<T>(T evento) where T : Event
         {
 
             await _mediator.Publish(evento);
         }
+
+
     }
 }

@@ -11,16 +11,19 @@ namespace Servcom.SGA.Service.Api.ViewModels.Atendimento
         }
 
         public Guid Id { get; set; }
-        public int Sequencia { get;  set; }
-        public DateTime DataCriacao { get;  set; }
-        public string HoraCriacao { get;  set; }
-        public DateTime DataHoraInicio { get;  set; }
-        public DateTime DataHoraFim { get;  set; }
-        public DateTime DataHoraultimoReingresso { get;  set; }
-        public EStatus Status { get;  set; }
-        public Guid UsuarioId { get;  set; }
-        public Guid TipoId { get;  set; }
-        public string Senha { get;  set; }
+        public int Sequencia { get; set; }
+        public DateTime DataCriacao { get; set; }
+        public string HoraCriacao { get; set; }
+        public DateTime DataHoraInicio { get; set; }
+        public DateTime DataHoraFim { get; set; }
+        public DateTime DataHoraultimoReingresso { get; set; }
+        public DateTime DataHoraChamada { get; set; }
+        public EStatus Status { get; set; }
+        public string Guiche { get; set; }
+        public bool Prioritario { get; set; }
+        public Guid UsuarioId { get; set; }
+        public Guid TipoId { get; set; }
+        public string Senha { get; set; }
 
     }
 }

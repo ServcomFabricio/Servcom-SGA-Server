@@ -16,7 +16,6 @@ namespace Servcom.SGA.Infra.Data.Mappings
                 .ValueGeneratedOnAddOrUpdate();
             builder.Ignore(a => a.ValidationResult);
             builder.Ignore(a => a.CascadeMode);
-            builder.Ignore(a => a.Senha);
             
             builder.HasOne(a => a.TipoAtendimento)
                 .WithMany(t => t.Atendimentos)

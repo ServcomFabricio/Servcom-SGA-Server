@@ -4651,7 +4651,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
           "Servcom.SGA.Domain.Core": "1.0.0",
           "pomelo.EntityFrameWorkCore.mysql": "2.1.2"
@@ -12629,8 +12628,10 @@
             "version": "[5.0.1, )"
           },
           "Microsoft.AspNetCore.App": {
+            "suppressParent": "All",
             "target": "Package",
-            "version": "[2.2.0, )"
+            "version": "[2.2.0, )",
+            "autoReferenced": true
           },
           "Microsoft.AspNetCore.Razor.Design": {
             "suppressParent": "All",

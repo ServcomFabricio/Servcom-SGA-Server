@@ -44,10 +44,15 @@ namespace Servcom.SGA.Service.Api
                 options.Password.RequiredUniqueChars = 0;
        
             });
-            
+
+            //services.Configure<IISServerOptions>(options =>
+            //{
+            //    options.AutomaticAuthentication = false;
+            //});
+
             // incluir SignalR
             services.AddSignalR();
-
+       
             // inlcui CORS
             //services.AddCors();
 
@@ -97,7 +102,7 @@ namespace Servcom.SGA.Service.Api
             }
             else
             {
-                app.UseHsts();
+              //  app.UseHsts();
             }
 
             //app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
@@ -115,7 +120,7 @@ namespace Servcom.SGA.Service.Api
 
             #region Configurações MVC
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             // Arquivo estaticos
             app.UseStaticFiles();
             // Autenticação de usuário

@@ -491,7 +491,8 @@
       },
       "Servcom.SGA.Domain.Atendimentos/1.0.0": {
         "dependencies": {
-          "Servcom.SGA.Domain.Core": "1.0.0"
+          "Servcom.SGA.Domain.Core": "1.0.0",
+          "Servcom.SGA.Domain.Usuarios": "1.0.0"
         },
         "runtime": {
           "Servcom.SGA.Domain.Atendimentos.dll": {}
@@ -508,7 +509,6 @@
       },
       "Servcom.SGA.Domain.Usuarios/1.0.0": {
         "dependencies": {
-          "Servcom.SGA.Domain.Atendimentos": "1.0.0",
           "Servcom.SGA.Domain.Core": "1.0.0"
         },
         "runtime": {

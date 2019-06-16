@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
+using Servcom.SGA.Domain.Atendimentos;
 using Servcom.SGA.Domain.Atendimentos.Commands;
 using Servcom.SGA.Domain.Atendimentos.Commands.CommandsTipoAtendimento;
 using Servcom.SGA.Domain.Atendimentos.Events;
@@ -38,6 +39,8 @@ namespace Servcom.SGA.Infra.CrossCutting.IoC.InjectorDependecies
             services.AddScoped<IRequestHandler<ExcluirTipoAtendimentoCommand,bool>, TipoAtendimentoCommandHandler>();
 
            services.AddScoped<IRequestHandler<IncluirAtendimentoCommand, bool>, AtendimentoCommandHandler>();
+           services.AddScoped<IRequestHandler<ProximoAtendimentoCommand, object>, AtendimentoCommandHandler>();
+           
 
 
             //Domain - Events
@@ -51,6 +54,7 @@ namespace Servcom.SGA.Infra.CrossCutting.IoC.InjectorDependecies
             services.AddScoped<INotificationHandler<TipoAtendimentoExcluidoEvent>, TipoAtendimentoEventHandler>();
 
             services.AddScoped<INotificationHandler<AtendimentoRegistradoEvent>, AtendimentoEventHandler>();
+            services.AddScoped<INotificationHandler<AtendimentoProximoSolicitadoEvent>, AtendimentoEventHandler>();
 
 
             // Infra - Data

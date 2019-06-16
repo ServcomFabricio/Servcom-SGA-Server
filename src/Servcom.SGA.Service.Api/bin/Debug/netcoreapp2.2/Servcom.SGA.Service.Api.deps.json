@@ -441,7 +441,6 @@
       },
       "Servcom.SGA.Infra.CrossCutting.Identity/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
           "Servcom.SGA.Domain.Core": "1.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "2.1.2"

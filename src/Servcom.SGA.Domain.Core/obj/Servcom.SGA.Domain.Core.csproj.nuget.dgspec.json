@@ -70,6 +70,11 @@
           "assetTargetFallback": true,
           "warn": true
         }
+      },
+      "runtimes": {
+        "win-x86": {
+          "#import": []
+        }
       }
     }
   }
