@@ -19,7 +19,7 @@ namespace Servcom.SGA.Infra.Data.Repository
             _tipoAtendimentoRepository = tipoAtendimentoRepository;
         }
 
-        public int obterUltimoAtendimento(Guid? tipoId, DateTime dataCriacao)
+        public int ObterUltimoAtendimento(Guid? tipoId, DateTime dataCriacao)
         {
             int ultAtendimento = 0;
             try
@@ -31,7 +31,7 @@ namespace Servcom.SGA.Infra.Data.Repository
             return ultAtendimento;
         }
 
-        public Atendimento obterPrimeiroAtendimentoSemUsuario(Guid? tipoId, DateTime dataCriacao, Guid? usuarioId, bool? prioritario)
+        public Atendimento ObterPrimeiroAtendimentoSemUsuario(Guid? tipoId, DateTime dataCriacao, Guid? usuarioId, bool? prioritario)
         {
 
             try
@@ -66,8 +66,8 @@ namespace Servcom.SGA.Infra.Data.Repository
                     saveFailed = true;
                     var guiche = atendimento.Guiche;
                     var usuarioID = atendimento.UsuarioId;
-                    atendimento = obterPrimeiroAtendimentoSemUsuario(atendimento.TipoId, atendimento.DataCriacao, atendimento.UsuarioId, atendimento.Prioritario);
-                    atendimento.setNovoAtendimento(usuarioID, guiche);
+                    atendimento = ObterPrimeiroAtendimentoSemUsuario(atendimento.TipoId, atendimento.DataCriacao, atendimento.UsuarioId, atendimento.Prioritario);
+                    atendimento.SetNovoAtendimento(usuarioID, guiche);
                 }
 
             } while (saveFailed);
@@ -91,9 +91,9 @@ namespace Servcom.SGA.Infra.Data.Repository
                 {
 
                     saveFailed = true;
-                    var ultAtendimento = (int)obterUltimoAtendimento(atendimento.TipoId, atendimento.DataCriacao);
-                    var tipo = _tipoAtendimentoRepository.ObterPorId((Guid)atendimento.TipoId).Tipo;
-                    atendimento.setSequencia(ultAtendimento + 1, tipo);
+                    var ultAtendimento = (int)ObterUltimoAtendimento(atendimento.TipoId, atendimento.DataCriacao);
+                    var tipoA = _tipoAtendimentoRepository.ObterPorId((Guid)atendimento.TipoId);
+                    atendimento.SetSequencia(ultAtendimento + 1, tipoA.Tipo,tipoA.Prioritario);
                 }
 
             } while (saveFailed);
@@ -101,7 +101,7 @@ namespace Servcom.SGA.Infra.Data.Repository
             return qtdSave;
         }
 
-        public IEnumerable<Atendimento> painelAtendimento(int quantidadeAtendiementos=1)
+        public IEnumerable<Atendimento> PainelAtendimento(int quantidadeAtendiementos=1)
         {
             return DbSet.Where(a => a.DataCriacao == DateTime.Now.Date && a.DataHoraChamada != DateTime.MinValue).OrderByDescending(a => a.DataHoraChamada).ToList().Take(quantidadeAtendiementos);
         }

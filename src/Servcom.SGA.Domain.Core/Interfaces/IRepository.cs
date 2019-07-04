@@ -9,7 +9,7 @@ namespace Servcom.SGA.Domain.Core.Interfaces
     {
         void Registrar(TEntity obj);
         TEntity ObterPorId(Guid id);
-        void Atualizar(TEntity obj);
+        void Atualizar(TEntity obj, string[] noUpdate= null);
         void Remover(Guid id);
         IEnumerable<TEntity> Buscar(Expression<Func<TEntity, bool>> predicate);
         int SaveChanges();

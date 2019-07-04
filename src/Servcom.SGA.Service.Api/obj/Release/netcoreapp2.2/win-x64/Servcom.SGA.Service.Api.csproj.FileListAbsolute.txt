@@ -28,3 +28,7 @@ D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Service.Api\obj
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Service.Api\obj\Release\netcoreapp2.2\win-x64\Servcom.SGA.Service.Api.csproj.CopyComplete
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Service.Api\obj\Release\netcoreapp2.2\win-x64\Servcom.SGA.Service.Api.dll
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Service.Api\obj\Release\netcoreapp2.2\win-x64\Servcom.SGA.Service.Api.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Service.Api\bin\Release\netcoreapp2.2\win-x64\hostpolicy.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Service.Api\bin\Release\netcoreapp2.2\win-x64\hostfxr.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Service.Api\bin\Release\netcoreapp2.2\win-x64\Servcom.SGA.Domain.Configuracao.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Service.Api\bin\Release\netcoreapp2.2\win-x64\Servcom.SGA.Domain.Configuracao.pdb

@@ -16,20 +16,20 @@ namespace Servcom.SGA.Domain.Atendimentos.Commands
 
         public string Tipo { get; set; }
         public string Usuario { get; set; }
-        public Guid Id { get; protected set; }
-        public int Sequencia { get; protected set; }
-        public Guid? TipoId { get; protected set; }
-        public DateTime DataCriacao { get; protected set; }
-        public string HoraCriacao { get; protected set; }
-        public DateTime DataHoraInicio { get; protected set; }
-        public DateTime DataHoraFim { get; protected set; }
-        public DateTime DataHoraultimoReingresso { get; protected set; }
-        public EStatus Status { get; protected set; }
-        public Guid? UsuarioId { get; protected set; }
-        public DateTime DataHoraChamada { get; protected set; }
-        public string Guiche { get; protected set; }
-        public bool Prioritario { get; protected set; }
-        public string Senha { get; protected set; }
+        public Guid Id { get;  set; }
+        public int Sequencia { get;  set; }
+        public Guid? TipoId { get;  set; }
+        public DateTime DataCriacao { get;  set; }
+        public string HoraCriacao { get;  set; }
+        public DateTime DataHoraInicio { get;  set; }
+        public DateTime DataHoraFim { get;  set; }
+        public DateTime DataHoraultimoReingresso { get;  set; }
+        public EStatus Status { get;  set; }
+        public Guid? UsuarioId { get;  set; }
+        public DateTime DataHoraChamada { get;  set; }
+        public string Guiche { get;  set; }
+        public bool Prioritario { get;  set; }
+        public string Senha { get;  set; }
 
 
     }

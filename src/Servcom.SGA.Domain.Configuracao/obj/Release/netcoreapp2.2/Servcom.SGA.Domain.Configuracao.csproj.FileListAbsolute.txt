@@ -1,0 +1,12 @@
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Configuracao\bin\Release\netcoreapp2.2\Servcom.SGA.Domain.Configuracao.deps.json
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Configuracao\bin\Release\netcoreapp2.2\Servcom.SGA.Domain.Configuracao.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Configuracao\bin\Release\netcoreapp2.2\Servcom.SGA.Domain.Configuracao.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Configuracao\bin\Release\netcoreapp2.2\Servcom.SGA.Domain.Core.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Configuracao\bin\Release\netcoreapp2.2\Servcom.SGA.Domain.Core.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Configuracao\obj\Release\netcoreapp2.2\Servcom.SGA.Domain.Configuracao.csprojAssemblyReference.cache
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Configuracao\obj\Release\netcoreapp2.2\Servcom.SGA.Domain.Configuracao.csproj.CoreCompileInputs.cache
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Configuracao\obj\Release\netcoreapp2.2\Servcom.SGA.Domain.Configuracao.AssemblyInfoInputs.cache
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Configuracao\obj\Release\netcoreapp2.2\Servcom.SGA.Domain.Configuracao.AssemblyInfo.cs
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Configuracao\obj\Release\netcoreapp2.2\Servcom.SGA.Domain.Configuracao.csproj.CopyComplete
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Configuracao\obj\Release\netcoreapp2.2\Servcom.SGA.Domain.Configuracao.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Configuracao\obj\Release\netcoreapp2.2\Servcom.SGA.Domain.Configuracao.pdb

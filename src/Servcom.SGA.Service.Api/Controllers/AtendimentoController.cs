@@ -38,6 +38,7 @@ namespace Servcom.SGA.Service.Api.Controllers
             _tipoAtendimentoRepository = tipoAtendimentoRepository;
             _atendimentoRepository = atendimentoRepository;
             _hubPainel = hubPainel;
+
         }
 
         [HttpGet]
@@ -46,29 +47,29 @@ namespace Servcom.SGA.Service.Api.Controllers
         public IActionResult NovaChamadaAtendimento(Guid idAtendimento)
         {
             var atendimento = _mapper.Map<AtendimentoViewModel>(_atendimentoRepository.ObterPorId(idAtendimento));
-            if (atendimento == null) {
+            if (atendimento == null)
+            {
                 NotificarErro("Erro", "Atendimento não encontrado");
-                return Response(); 
+                return Response();
             }
-            var result= _mapper.Map<IEnumerable<AtendimentoViewModel>>(_atendimentoRepository.painelAtendimento(3));
+            var result = _mapper.Map<IEnumerable<AtendimentoViewModel>>(_atendimentoRepository.PainelAtendimento(3));
             var listaAtendimento = new List<AtendimentoViewModel>() { atendimento };
             var response = listaAtendimento.Union(result);
             _hubPainel.Clients.All.SendAsync("painelAtendimento", response);
             return Response("OK");
         }
 
-        [HttpPost]
+        [HttpGet]
         [AllowAnonymous]
-        [Route("incluir-atendimento/{tipoId:guid}")]
-        public IActionResult novoAtendimento(Guid tipoId)
+        [Route("incluir-atendimento/{tipoId:guid}/{prioritario:bool}")]
+        public async Task<IActionResult> novoAtendimento(Guid tipoId, bool prioritario)
         {
-            var model =new AtendimentoViewModel() { TipoId=tipoId };
+            var model = new AtendimentoViewModel() { TipoId = tipoId, Prioritario = prioritario };
             var incluirCommand = _mapper.Map<IncluirAtendimentoCommand>(model);
-             _mediator.EnviarComando(incluirCommand);
+            var response = await _mediator.EnviarComandoEntity(incluirCommand);
 
-            if (!OperacaoValida()) return Response(model);
-            
-            var response = _atendimentoRepository.ObterPorId(incluirCommand.Id);
+            if (!OperacaoValida()) return Response(response);
+
             return Response(_mapper.Map<AtendimentoViewModel>(response));
         }
 
@@ -80,12 +81,23 @@ namespace Servcom.SGA.Service.Api.Controllers
             var proximoAtendimentoCommand = _mapper.Map<ProximoAtendimentoCommand>(model);
             var result = await _mediator.EnviarComandoEntity(proximoAtendimentoCommand);
             if (!OperacaoValida()) return Response();
-            await _hubPainel.Clients.All.SendAsync("painelAtendimento", _mapper.Map<IEnumerable<AtendimentoViewModel>>(_atendimentoRepository.painelAtendimento(4)));
+            await _hubPainel.Clients.All.SendAsync("painelAtendimento", _mapper.Map<IEnumerable<AtendimentoViewModel>>(_atendimentoRepository.PainelAtendimento(4)));
             var response = _mapper.Map<AtendimentoViewModel>(result);
             return Response(response);
         }
 
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("atualizar-atendimento")]
+        public async Task<IActionResult> AtualizarAtendimento([FromBody] AtendimentoViewModel model)
+        {
+            var editarAtendimentoCommand = _mapper.Map<EditarAtendimentoCommand>(model);
+            await _mediator.EnviarComando(editarAtendimentoCommand);
 
+            return Response(editarAtendimentoCommand);
+        }
+
+        #region TipoAtendimento
         [HttpPost]
         [Authorize(Policy = "PodeGravar")]
         [Route("incluir-tipo-atendimento")]
@@ -118,7 +130,7 @@ namespace Servcom.SGA.Service.Api.Controllers
         }
 
         [HttpGet]
-        [Authorize(Policy = "PodeGravar")]
+        [AllowAnonymous]
         [Route("listar-tipos-atendimento")]
         public IEnumerable<TipoAtendimentoViewModel> Get()
         {
@@ -131,8 +143,11 @@ namespace Servcom.SGA.Service.Api.Controllers
         {
             return _mapper.Map<TipoAtendimentoViewModel>(_tipoAtendimentoRepository.ObterPorId(id));
         }
+        #endregion
 
-     
+
+
+
 
     }
 }

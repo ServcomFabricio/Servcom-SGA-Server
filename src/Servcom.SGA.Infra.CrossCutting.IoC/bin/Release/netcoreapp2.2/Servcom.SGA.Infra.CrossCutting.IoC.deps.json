@@ -12,6 +12,7 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
           "Microsoft.Extensions.Identity.Core": "2.2.0",
           "Servcom.SGA.Domain.Atendimentos": "1.0.0",
+          "Servcom.SGA.Domain.Configuracao": "1.0.0",
           "Servcom.SGA.Domain.Usuarios": "1.0.0",
           "Servcom.SGA.Infra.CrossCutting.AspNetFilters": "1.0.0",
           "Servcom.SGA.Infra.CrossCutting.Identity": "1.0.0",
@@ -1948,6 +1949,14 @@
           "Servcom.SGA.Domain.Atendimentos.dll": {}
         }
       },
+      "Servcom.SGA.Domain.Configuracao/1.0.0": {
+        "dependencies": {
+          "Servcom.SGA.Domain.Core": "1.0.0"
+        },
+        "runtime": {
+          "Servcom.SGA.Domain.Configuracao.dll": {}
+        }
+      },
       "Servcom.SGA.Domain.Core/1.0.0": {
         "dependencies": {
           "FluentValidation": "8.4.0",
@@ -1990,6 +1999,7 @@
           "Microsoft.Extensions.Configuration": "2.2.0",
           "Microsoft.Extensions.Configuration.Json": "2.1.1",
           "Servcom.SGA.Domain.Atendimentos": "1.0.0",
+          "Servcom.SGA.Domain.Configuracao": "1.0.0",
           "Servcom.SGA.Domain.Usuarios": "1.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "2.1.2"
         },
@@ -3217,6 +3227,11 @@
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
     },
     "Servcom.SGA.Domain.Atendimentos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Servcom.SGA.Domain.Configuracao/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

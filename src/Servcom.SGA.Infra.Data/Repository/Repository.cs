@@ -25,8 +25,16 @@ namespace Servcom.SGA.Infra.Data.Repository
             DbSet.Add(obj);
         }
 
-        public virtual void Atualizar(TEntity obj)
+        public virtual void Atualizar(TEntity obj,string[] noUpdate=null)
         {
+            if (noUpdate != null)
+            {
+                var entry = Db.Entry(obj);
+                foreach (var name in noUpdate)
+                {
+                    entry.Property(name).IsModified = false;
+                }
+            }
             DbSet.Update(obj);
         }
 

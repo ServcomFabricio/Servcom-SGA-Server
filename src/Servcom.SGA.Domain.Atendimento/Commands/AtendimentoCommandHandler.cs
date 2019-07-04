@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Servcom.SGA.Domain.Atendimentos.Commands.CommandsTipoAtendimento;
 using Servcom.SGA.Domain.Atendimentos.Events;
 using Servcom.SGA.Domain.Atendimentos.Repository;
 using Servcom.SGA.Domain.Core.Handlers;
@@ -13,8 +14,9 @@ using System.Threading.Tasks;
 namespace Servcom.SGA.Domain.Atendimentos.Commands
 {
     public class AtendimentoCommandHandler : CommandHandler,
-        IRequestHandler<IncluirAtendimentoCommand, bool>,
-        IRequestHandler<ProximoAtendimentoCommand, object>
+        IRequestHandler<IncluirAtendimentoCommand, object>,
+        IRequestHandler<ProximoAtendimentoCommand, object>,
+        IRequestHandler<EditarAtendimentoCommand, bool>
     {
         private readonly IMediatorHandler _mediator;
         private readonly IAtendimentoRepository _atendimentoRepository;
@@ -36,32 +38,32 @@ namespace Servcom.SGA.Domain.Atendimentos.Commands
             _usuarioRepository = usuarioRepository;
         }
 
-        public Task<bool> Handle(IncluirAtendimentoCommand request, CancellationToken cancellationToken)
+        public async Task<object> Handle(IncluirAtendimentoCommand request, CancellationToken cancellationToken)
         {
-            var atendimento = new Atendimento(request.Id, request.TipoId);
+            var atendimento = new Atendimento(request.Id, request.Prioritario, request.TipoId);
 
             if (!atendimento.EhValido())
             {
                 NotificarValidacoesErro(atendimento.ValidationResult);
-                return Task.FromResult(true);
+                return null;
             }
             var tipo = _tipoAtendimentoRepository.ObterPorId((Guid)request.TipoId);
 
             if (tipo==null)
             {
-                _mediator.PublicarEvento(new DomainNotification(request.MessageType, "Tipo de atendimento não encontrado"));
-                return Task.FromResult(true);
+                await _mediator.PublicarEvento(new DomainNotification(request.MessageType, "Tipo de atendimento não encontrado"));
+                return null;
             }
-            var seq = (int)_atendimentoRepository.obterUltimoAtendimento(atendimento.TipoId, atendimento.DataCriacao);
-            atendimento.setSequencia(seq + 1,tipo.Tipo);
+            var seq = (int)_atendimentoRepository.ObterUltimoAtendimento(atendimento.TipoId, atendimento.DataCriacao);
+            atendimento.SetSequencia(seq + 1,tipo.Tipo,atendimento.Prioritario);
 
             _atendimentoRepository.Registrar(atendimento);
 
             if (_atendimentoRepository.SaveChangesIncluir(atendimento) > 0)
             {
-                _mediator.PublicarEvento(new AtendimentoRegistradoEvent(atendimento.Id, atendimento.Sequencia, atendimento.DataCriacao, atendimento.TipoId, atendimento.HoraCriacao));
+                await _mediator.PublicarEvento(new AtendimentoRegistradoEvent(atendimento.Id, atendimento.Sequencia, atendimento.DataCriacao, atendimento.TipoId, atendimento.HoraCriacao));
             }
-            return Task.FromResult(true);
+            return await Task.FromResult(atendimento);
         }
 
         public async Task<object> Handle(ProximoAtendimentoCommand request, CancellationToken cancellationToken)
@@ -85,7 +87,7 @@ namespace Servcom.SGA.Domain.Atendimentos.Commands
 
             var tipoId = tipo.FirstOrDefault().Id;
             var usuarioId = usuario.FirstOrDefault().Id;
-            var atendimento = _atendimentoRepository.obterPrimeiroAtendimentoSemUsuario((Guid?)tipoId, request.DataCriacao, (Guid?)usuarioId, request.Prioritario);
+            var atendimento = _atendimentoRepository.ObterPrimeiroAtendimentoSemUsuario((Guid?)tipoId, request.DataCriacao, (Guid?)usuarioId, request.Prioritario);
 
             if (atendimento == null)
             {
@@ -93,7 +95,7 @@ namespace Servcom.SGA.Domain.Atendimentos.Commands
                 return null;
             }
 
-            atendimento.setNovoAtendimento(usuarioId, request.Guiche);
+            atendimento.SetNovoAtendimento(usuarioId, request.Guiche);
 
             _atendimentoRepository.Atualizar(atendimento);
 
@@ -110,6 +112,33 @@ namespace Servcom.SGA.Domain.Atendimentos.Commands
             }
             await _mediator.PublicarEvento(new DomainNotification("Commit", "Ocorreu um erro ao salvar os dados no banco"));
             return null;
+        }
+
+        public Task<bool> Handle(EditarAtendimentoCommand request, CancellationToken cancellationToken)
+        {
+            var atendimentoEditado = _atendimentoRepository.ObterPorId(request.Id);
+            if (atendimentoEditado == null)
+            {
+                _mediator.PublicarEvento(new DomainNotification(request.MessageType, "Atendimento não encontrado"));
+                return Task.FromResult(true);
+            }
+
+            var atendimento = Atendimento.AtendimentoFactory.EditarAtendimento(request.Id, request.DataHoraInicio, request.DataHoraFim, request.DataHoraultimoReingresso, request.Guiche, request.Status, request.UsuarioId, atendimentoEditado.TipoId, atendimentoEditado.Sequencia, atendimentoEditado.DataCriacao,atendimentoEditado.TimeStamp);
+            var noUpdate = new[] { "TipoId", "DataCriacao","HoraCriacao", "Prioritario", "Sequencia", "Senha" };
+
+            if (!atendimento.EhValido())
+            {
+                NotificarValidacoesErro(atendimento.ValidationResult);
+                return Task.FromResult(true);
+            }
+
+            _atendimentoRepository.Atualizar(atendimento, noUpdate);
+
+            if (Commit())
+            {
+                _mediator.PublicarEvento(new AtendimentoAtualizadoEvent(atendimento.Id,atendimento.DataHoraInicio,atendimento.DataHoraFim,atendimento.DataHoraultimoReingresso,atendimento.Guiche,atendimento.Status,atendimento.UsuarioId));
+            }
+            return Task.FromResult(true);
         }
     }
 }

@@ -5,14 +5,14 @@ namespace Servcom.SGA.Domain.Atendimentos
 {
     public class Atendimento : Entity<Atendimento>
     {
-        public Atendimento(Guid id, Guid? tipoId)
+        public Atendimento(Guid id, bool prioritario, Guid? tipoId)
         {
             Id = id;
             TipoId = tipoId;
             DataCriacao = DateTime.Now.Date;
             HoraCriacao = DateTime.Now.ToString("HH:mm");
             Status = EStatus.Ativo;
-
+            Prioritario = prioritario;
 
         }
 
@@ -37,13 +37,14 @@ namespace Servcom.SGA.Domain.Atendimentos
         //EF propriedade de navegação
         public virtual TipoAtendimento TipoAtendimento { get; private set; }
 
-        public void setSequencia(int sequencia,string tipo)
+        public void SetSequencia(int sequencia, string tipo,bool prioridade)
         {
+            tipo = prioridade == true ? tipo + "P" : tipo;
             Sequencia = sequencia;
             Senha = tipo + String.Format("{0:D4}", Sequencia);
         }
 
-        public void setNovoAtendimento(Guid? usuarioId, string guiche)
+        public void SetNovoAtendimento(Guid? usuarioId, string guiche)
         {
             UsuarioId = usuarioId;
             Guiche = guiche;
@@ -56,7 +57,30 @@ namespace Servcom.SGA.Domain.Atendimentos
             return true;
         }
 
+        public static class AtendimentoFactory
+        {
+            public static Atendimento EditarAtendimento(Guid id, DateTime dataHoraInicio, DateTime dataHoraFim, DateTime dataHoraultimoReingresso, string guiche, EStatus status, Guid? usuarioId, Guid? tipoId, int sequencia, DateTime dataCriacao,DateTime timeStamp)
+            {
+                usuarioId = usuarioId == Guid.Empty ? null : usuarioId;
+                return new Atendimento()
+                {
+                    Id = id,
+                    DataHoraInicio = dataHoraInicio,
+                    DataHoraFim = dataHoraFim,
+                    DataHoraultimoReingresso = dataHoraultimoReingresso,
+                    Guiche = guiche,
+                    Status = status,
+                    UsuarioId = usuarioId,
 
+                    TipoId=tipoId,
+                    Sequencia=sequencia,
+                    DataCriacao=dataCriacao,
+                    TimeStamp=timeStamp
+                    
+            };
 
+        }
     }
+
+}
 }

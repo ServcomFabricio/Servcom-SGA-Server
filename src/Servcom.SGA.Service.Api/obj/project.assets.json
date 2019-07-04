@@ -4606,6 +4606,19 @@
           "bin/placeholder/Servcom.SGA.Domain.Atendimentos.dll": {}
         }
       },
+      "Servcom.SGA.Domain.Configuracao/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Servcom.SGA.Domain.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Servcom.SGA.Domain.Configuracao.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Servcom.SGA.Domain.Configuracao.dll": {}
+        }
+      },
       "Servcom.SGA.Domain.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -4670,6 +4683,7 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
           "Microsoft.Extensions.Identity.Core": "2.2.0",
           "Servcom.SGA.Domain.Atendimentos": "1.0.0",
+          "Servcom.SGA.Domain.Configuracao": "1.0.0",
           "Servcom.SGA.Domain.Usuarios": "1.0.0",
           "Servcom.SGA.Infra.CrossCutting.AspNetFilters": "1.0.0",
           "Servcom.SGA.Infra.CrossCutting.Identity": "1.0.0",
@@ -4691,6 +4705,7 @@
           "Microsoft.Extensions.Configuration": "2.1.1",
           "Microsoft.Extensions.Configuration.Json": "2.1.1",
           "Servcom.SGA.Domain.Atendimentos": "1.0.0",
+          "Servcom.SGA.Domain.Configuracao": "1.0.0",
           "Servcom.SGA.Domain.Usuarios": "1.0.0",
           "pomelo.EntityFrameWorkCore.mysql": "2.1.2"
         },
@@ -12512,6 +12527,11 @@
       "type": "project",
       "path": "../Servcom.SGA.Domain.Atendimento/Servcom.SGA.Domain.Atendimentos.csproj",
       "msbuildProject": "../Servcom.SGA.Domain.Atendimento/Servcom.SGA.Domain.Atendimentos.csproj"
+    },
+    "Servcom.SGA.Domain.Configuracao/1.0.0": {
+      "type": "project",
+      "path": "../Servcom.SGA.Domain.Configuracao/Servcom.SGA.Domain.Configuracao.csproj",
+      "msbuildProject": "../Servcom.SGA.Domain.Configuracao/Servcom.SGA.Domain.Configuracao.csproj"
     },
     "Servcom.SGA.Domain.Core/1.0.0": {
       "type": "project",

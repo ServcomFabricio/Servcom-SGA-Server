@@ -13,6 +13,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Servcom.SGA.Infra.CrossCutting.AspNetFilters;
 using Servcom.SGA.Infra.CrossCutting.Identity;
 using Servcom.SGA.Service.Api.Configurations;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Servcom.SGA.Service.Api
 {
@@ -45,21 +47,23 @@ namespace Servcom.SGA.Service.Api
        
             });
 
-            //services.Configure<IISServerOptions>(options =>
-            //{
-            //    options.AutomaticAuthentication = false;
-            //});
-
+  
             // incluir SignalR
             services.AddSignalR();
-       
-            // inlcui CORS
-            //services.AddCors();
 
+            // busca ipadrress do arquivo appsettings            
+            var  AuthAdrressList = Configuration.GetSection("AuthorizeCors:ips").GetChildren().ToList();
+            var authAdrress=new List<string>();
+            foreach (var item in AuthAdrressList)
+            {
+                authAdrress.Add(item.Value);
+            }
+
+            // inlcui CORS
             services.AddCors(options =>
             {
                 options.AddPolicy("CorsPolicy",
-                    builder => builder.WithOrigins("http://localhost:4200")
+                    builder => builder.WithOrigins(authAdrress.ToArray())
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials());
@@ -70,6 +74,7 @@ namespace Servcom.SGA.Service.Api
 
             services.AddMvc(options =>
             {
+                //TODO:logger
                 //options.Filters.Add(new ServiceFilterAttribute(typeof(GlobalActionLogger)));
                 options.Filters.Add(typeof(ValidateModelAttribute));
                 options.OutputFormatters.Remove(new XmlDataContractSerializerOutputFormatter());
@@ -102,10 +107,12 @@ namespace Servcom.SGA.Service.Api
             }
             else
             {
-              //  app.UseHsts();
+                //somente para IIS
+                app.UseHsts();
+                //TODO: retirar
+                app.UseDeveloperExceptionPage();
             }
 
-            //app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
             app.UseCors("CorsPolicy");
 
             app.UseSignalR(route =>
@@ -119,8 +126,8 @@ namespace Servcom.SGA.Service.Api
             });
 
             #region Configurações MVC
-
-            //app.UseHttpsRedirection();
+            //somente para IIS
+            app.UseHttpsRedirection();
             // Arquivo estaticos
             app.UseStaticFiles();
             // Autenticação de usuário

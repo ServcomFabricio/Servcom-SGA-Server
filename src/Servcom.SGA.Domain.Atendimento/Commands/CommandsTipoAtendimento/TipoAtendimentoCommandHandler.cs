@@ -78,8 +78,8 @@ namespace Servcom.SGA.Domain.Atendimentos.Commands.CommandsTipoAtendimento
             }
 
             _tipoAtendimentoRepository.Atualizar(tipoAtendimento);
-            var com = Commit();
-            if (com)
+            
+            if (Commit())
             {
                 _mediator.PublicarEvento(new TipoAtendimentoAtualizadoEvent(tipoAtendimento.Id, tipoAtendimento.Tipo, tipoAtendimento.Descricao, tipoAtendimento.Prioritario));
             }

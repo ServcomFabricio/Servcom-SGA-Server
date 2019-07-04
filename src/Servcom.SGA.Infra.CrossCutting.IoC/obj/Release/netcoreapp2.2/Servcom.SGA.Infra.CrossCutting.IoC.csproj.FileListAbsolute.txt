@@ -20,3 +20,5 @@ D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutt
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.IoC\obj\Release\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.IoC.csproj.CopyComplete
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.IoC\obj\Release\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.IoC.dll
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.IoC\obj\Release\netcoreapp2.2\Servcom.SGA.Infra.CrossCutting.IoC.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.IoC\bin\Release\netcoreapp2.2\Servcom.SGA.Domain.Configuracao.dll
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Infra.CrossCutting.IoC\bin\Release\netcoreapp2.2\Servcom.SGA.Domain.Configuracao.pdb

@@ -81,6 +81,42 @@ namespace Servcom.SGA.Infra.Data.Migrations
                     b.ToTable("TipoAtendimentos");
                 });
 
+            modelBuilder.Entity("Servcom.SGA.Domain.Configuracao.ConfiguracaoConteudo", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<bool>("Ativo");
+
+                    b.Property<string>("Conteudo");
+
+                    b.Property<string>("Descricao");
+
+                    b.Property<int>("Tipo");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ConfiguracaoConteudo");
+                });
+
+            modelBuilder.Entity("Servcom.SGA.Domain.Configuracao.ConfiguracaoGeral", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<bool>("ConteudoConfigurado");
+
+                    b.Property<bool>("EntradaVideo");
+
+                    b.Property<string>("TextoFixoPainelAtendimento");
+
+                    b.Property<string>("TituloPainelAtendimento");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ConfiguracaoGeral");
+                });
+
             modelBuilder.Entity("Servcom.SGA.Domain.Usuarios.Usuario", b =>
                 {
                     b.Property<Guid>("Id")

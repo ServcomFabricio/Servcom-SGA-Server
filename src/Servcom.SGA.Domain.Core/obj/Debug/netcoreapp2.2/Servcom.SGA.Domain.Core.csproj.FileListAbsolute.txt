@@ -24,3 +24,4 @@ D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Core\obj
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Core\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Core.AssemblyInfo.cs
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Core\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Core.dll
 D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Core\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Core.pdb
+D:\projetos\ServcomSGA\Server\Servcom-SGA-Server\src\Servcom.SGA.Domain.Core\obj\Debug\netcoreapp2.2\Servcom.SGA.Domain.Core.csprojAssemblyReference.cache
